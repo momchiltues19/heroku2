@@ -1,4 +1,4 @@
-<% form_with scope: :message, url: messages_path, local: true do |form| %>
+<%= form_with scope: :message, local: true do |form| %>
   <p>
     <%= form.label :text %><br>
     <%= form.text_area :text %>
