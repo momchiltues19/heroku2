@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   def new
   end
   def create
-    @message = Message.new(params.permit(:text))
-    @message.save
+    @message = Message.new(params.require(:message).permit(:text))
+    @message.save 
   end
 end
