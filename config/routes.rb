@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   get 'messages' => 'messages#new'
   resources :messages
   root 'messages#new'
-  post 'notes/api' => 'messages#api'
+  post 'messages/api' => 'messages#api'
 end
