@@ -11,14 +11,14 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(params.require(:message).permit(:text))
     @message.save 
-    url = "https://privnote-mine.herokuapp.com/messages/" + @message.id.to_s
+    url = "https://cipher-me.herokuapp.com/messages/" + @message.id.to_s
     render plain: url
   end
   def api 
     @message = Mesasge.new
     @message.text = params.permit(:message)
     @message.save
-    url = "https://privnote-mine.herokuapp.com/messages/" + @messages.id.to_s
+    url = "https://cipher-me.herokuapp.com/messages/" + @messages.id.to_s
     url_json = {:url => url}
     render json: url_json.to_json
   end 
