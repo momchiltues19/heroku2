@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   def show
-    @message = Message.find(params[:id])	
+    @message = Message.find(params[:id])
+    @message.destroy 	
   end
   def new
   end
