@@ -19,6 +19,6 @@ class MessagesController < ApplicationController
     @message.text = params.permit(:message)
     @message.save
     url = "https://privnote-mine.herokuapp.com/messages" + @messages.id.to_s
-    render json: {:url => url}
+    render json: {:url => url}.to_json
   end 
 end
